@@ -171,6 +171,7 @@ bool init(SDL_Window* &gWindow, SDL_Renderer* &gRenderer, const int SCREEN_WIDTH
     SDL_SetRenderDrawColor( gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
 
     Mix_OpenAudio(44100,MIX_DEFAULT_FORMAT,2,2048) ;
+	if(gWindow == NULL || gRenderer == NULL) success = false;
 
 	return success;
 }
